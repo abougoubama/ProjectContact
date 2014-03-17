@@ -7,8 +7,8 @@
 #include <QTableView>
 #include <QDebug>
 
-#include "contacts.h"
-#include "mymodelcontacts.h"
+#include "modele/contacts.h"
+#include "modele/mymodelcontacts.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),

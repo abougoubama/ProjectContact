@@ -2,7 +2,6 @@
 #define CONTACT_H
 
 #include <QObject>
-#include <QMultiMap>
 #include <QString>
 #include <QPair>
 

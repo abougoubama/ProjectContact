@@ -13,19 +13,26 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
-    contact.cpp \
-    contacts.cpp \
-    mymodelcontacts.cpp \
-    contactview.cpp
+        vue/mainwindow.cpp \
+    modele/contact.cpp \
+    modele/contacts.cpp \
+    modele/mymodelcontacts.cpp \
+    vue/contactview.cpp \
+    modele/champ.cpp \
+    modele/listechamps.cpp \
+    modele/mymodellistechamps.cpp
 
-HEADERS  += mainwindow.h \
-    contact.h \
-    contacts.h \
+HEADERS  += vue/mainwindow.h \
+    modele/contact.h \
+    modele/contacts.h \
     mymodelcontacts.h \
-    contactview.h
+    vue/contactview.h \
+    modele/champ.h \
+    modele/mymodelcontacts.h \
+    modele/listechamps.h \
+    modele/mymodellistechamps.h
 
-FORMS    += mainwindow.ui \
-    contactview.ui
+FORMS    += vue/mainwindow.ui \
+    vue/contactview.ui
 
 QMAKE_CXXFLAGS += -std=c++11

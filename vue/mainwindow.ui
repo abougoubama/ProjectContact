@@ -48,7 +48,7 @@
   <customwidget>
    <class>ContactView</class>
    <extends>QWidget</extends>
-   <header>contactview.h</header>
+   <header>vue/contactview.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

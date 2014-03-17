@@ -6,7 +6,7 @@
 
 #include <QMainWindow>
 
-#include "contacts.h"
+#include "modele/contacts.h"
 
 namespace Ui {
 class MainWindow;

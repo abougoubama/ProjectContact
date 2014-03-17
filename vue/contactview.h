@@ -2,7 +2,7 @@
 #define CONTACTVIEW_H
 
 #include <QWidget>
-#include<contact.h>
+#include "modele/contact.h"
 
 namespace Ui {
 class ContactView;
