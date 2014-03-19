@@ -1,4 +1,5 @@
 #include "contact.h"
+#include "modele/nom.h"
 
 
 Contact::Contact(QObject *parent) :QObject(parent)
@@ -10,14 +11,18 @@ Contact::~Contact()
 {
 
 }
-
-
-QString Contact::nom() const
-{
-    return mNom;
-}
-
- void Contact::setNom(QString nom)
+ ListeChamps & Contact::listeChamps()
  {
-     mNom=nom;
+     return mListeChamps;
+ }
+
+ Nom * Contact::nom()
+ {
+     return mNom;
+ }
+
+ void Contact::setNom(Nom * nom)
+ {
+    mNom = nom;
+    mListeChamps.ajouterChamp(mNom);
  }

@@ -5,6 +5,7 @@
 #include "contacts.h"
 
 class MyModelContacts : public QAbstractListModel
+        //QAbstractTreeModel conseillé
 {
     Q_OBJECT
 public:

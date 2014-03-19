@@ -4,6 +4,8 @@
 #include <QObject>
 #include <QString>
 #include <QPair>
+#include "listechamps.h"
+#include "modele/nom.h"
 
 
 class Contact : public QObject
@@ -12,15 +14,19 @@ class Contact : public QObject
 public:
     explicit Contact(QObject *parent = 0);
     ~Contact();
-    QString nom() const;
-    void setNom(QString nom);
+    ListeChamps & listeChamps();
+    Nom *nom();
+    void setNom(Nom * nom);
 
 signals:
 
 public slots:
 
 private:
-    QString mNom;
+    ListeChamps mListeChamps;
+    Nom * mNom;
+
 };
 
 #endif // CONTACT_H
+

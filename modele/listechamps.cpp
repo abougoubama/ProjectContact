@@ -34,3 +34,8 @@ Champ* ListeChamps::getChamp(int i)
 {
     return mListeChamps[i];
 }
+
+void ListeChamps::ajouterChamp(Champ * champ)
+{
+    mListeChamps<<champ;
+}

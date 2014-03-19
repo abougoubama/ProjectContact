@@ -15,4 +15,17 @@ QString Champ::nomChamp()
     return mNomChamp;
 }
 
+ QVariant Champ::toQVariant() const
+{
+    return toString();
+}
 
+ bool Champ::fromQVariant(const QVariant v)
+{
+    return fromString(v.toString());
+}
+
+ QVariant Champ::image() const
+ {
+     return QVariant();
+ }

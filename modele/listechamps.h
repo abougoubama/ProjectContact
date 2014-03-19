@@ -22,6 +22,8 @@ public:
      int nbChamps();
      Champ *getChamp(int i);
 
+     void ajouterChamp(Champ * champ);
+
 
 
 signals:
@@ -32,5 +34,6 @@ private:
     QList<Champ*> mListeChamps;
 
 };
+
 
 #endif // LISTECHAMPS_H

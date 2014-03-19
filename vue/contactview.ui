@@ -16,12 +16,18 @@
   <property name="styleSheet">
    <string notr="true">background-color:white;</string>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="labelNom">
-     <property name="text">
-      <string/>
+    <widget class="QTableView" name="tableView">
+     <property name="showGrid">
+      <bool>false</bool>
      </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
     </widget>
    </item>
   </layout>

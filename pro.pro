@@ -20,7 +20,9 @@ SOURCES += main.cpp\
     vue/contactview.cpp \
     modele/champ.cpp \
     modele/listechamps.cpp \
-    modele/mymodellistechamps.cpp
+    modele/mymodellistechamps.cpp \
+    modele/nom.cpp \
+    modele/image.cpp
 
 HEADERS  += vue/mainwindow.h \
     modele/contact.h \
@@ -30,7 +32,9 @@ HEADERS  += vue/mainwindow.h \
     modele/champ.h \
     modele/mymodelcontacts.h \
     modele/listechamps.h \
-    modele/mymodellistechamps.h
+    modele/mymodellistechamps.h \
+    modele/nom.h \
+    modele/image.h
 
 FORMS    += vue/mainwindow.ui \
     vue/contactview.ui

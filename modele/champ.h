@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QString>
+#include <QVariant>
 
 class Champ : public QObject
 {
@@ -22,12 +23,20 @@ public:
      */
     virtual bool fromString(const QString)=0;
 
+    virtual QVariant toQVariant() const ;
+
+    virtual bool fromQVariant(const QVariant v);
+    virtual QVariant image() const;
+
+
 signals:
 
 public slots:
 
 private:
     QString mNomChamp;
+
+
 
 };
 

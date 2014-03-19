@@ -5,7 +5,6 @@
 
 
 #include <QMainWindow>
-
 #include "modele/contacts.h"
 
 namespace Ui {

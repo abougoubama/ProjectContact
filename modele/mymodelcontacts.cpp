@@ -19,7 +19,7 @@ QVariant MyModelContacts::data(const QModelIndex &index, int role) const
     if(index.row()>=mContacts.nbContact()) return QVariant();
     if (role == Qt::DisplayRole)
     {
-       return mContacts.getContact(index.row())->nom();
+       return mContacts.getContact(index.row())->nom()->toString();
     }
 
     return QVariant();
