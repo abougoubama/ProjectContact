@@ -1,7 +1,7 @@
 #include "champ.h"
 
-Champ::Champ(QObject *parent) :
-    QObject(parent)
+Champ::Champ(QString nomChamp,QObject *parent) :
+    QObject(parent), mNomChamp(nomChamp)
 {
 }
 
@@ -15,7 +15,7 @@ QString Champ::nomChamp()
     return mNomChamp;
 }
 
- QVariant Champ::toQVariant() const
+ QVariant Champ::toQVariant()
 {
     return toString();
 }

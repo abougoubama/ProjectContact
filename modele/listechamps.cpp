@@ -1,8 +1,8 @@
 #include "listechamps.h"
 #include "champ.h"
 
-ListeChamps::ListeChamps(QObject *parent) :
-    Champ(parent)
+ListeChamps::ListeChamps(QString nomChamp, QObject *parent) :
+    Champ(nomChamp,parent)
 {
 }
 
@@ -13,7 +13,7 @@ ListeChamps::ListeChamps(QObject *parent) :
  QString ListeChamps::toString() const
 {
     QString chaine="";
-    for(Champ* champ : mListeChamps) chaine+=champ->toString()+";";
+    for(Champ* champ : mListeChamps) chaine+=champ->toString()+" ";
     return chaine;
 }
 /**
@@ -37,5 +37,8 @@ Champ* ListeChamps::getChamp(int i)
 
 void ListeChamps::ajouterChamp(Champ * champ)
 {
+    emit beginInsert(mListeChamps.size());
     mListeChamps<<champ;
+    emit endInsert();
 }
+

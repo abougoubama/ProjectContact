@@ -6,6 +6,12 @@
 MyModelListeChamps::MyModelListeChamps(ListeChamps & listechamps,QObject *parent) :
     QAbstractTableModel(parent),mListeChamps(listechamps)
 {
+    connect(&mListeChamps,&ListeChamps::beginInsert,[this](int position){
+        beginInsertRows(QModelIndex(),position,position);
+    });
+    connect(&mListeChamps,&ListeChamps::endInsert,[this](){
+        endInsertRows();
+    });
 }
 
 int MyModelListeChamps::rowCount(const QModelIndex & /*parent*/) const
@@ -77,3 +83,4 @@ Qt::ItemFlags MyModelListeChamps::flags(const QModelIndex &index) const
 {
     return index.column()!=1 ?QAbstractTableModel::flags(index) : Qt::ItemIsEditable | QAbstractTableModel::flags(index);
 }
+

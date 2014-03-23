@@ -1,8 +1,8 @@
 #include "image.h"
 #include <QDebug>
 
-Image::Image(QObject *parent) :
-    Champ(parent)
+Image::Image(QString nomChamp, QObject *parent) :
+    Champ(nomChamp,parent)
 {
 }
 
@@ -16,14 +16,15 @@ bool Image::fromString(const QString)
    return false;
 }
 
-QVariant Image::toQVariant() const
+QVariant Image::toQVariant()
 {
-   return mUrl;
+   return QVariant::fromValue(this);
 }
 
 bool Image::fromQVariant(const QVariant v)
 {
-   setUrl(v.toString());
+   Image * image=v.value<Image*>();
+   setUrl(image->url());
    return true;
 }
 
@@ -41,3 +42,8 @@ void Image::setUrl(QUrl url)
       if(mImage.load(url.toLocalFile())) mImage=mImage.scaledToHeight(400);
   }
 }
+
+ QUrl Image::url()
+ {
+     return mUrl;
+ }

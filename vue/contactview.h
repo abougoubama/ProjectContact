@@ -16,6 +16,7 @@ public:
     explicit ContactView(QWidget *parent = 0);
     void setContact(Contact *contact);
 
+
     ~ContactView();
 
 private:

@@ -1,7 +1,7 @@
 #include "nom.h"
 
-Nom::Nom(QObject *parent) :
-    Champ(parent)
+Nom::Nom(QString nomChamp, QObject *parent) :
+    Champ(nomChamp,parent)
 {
 }
 QString Nom::toString() const

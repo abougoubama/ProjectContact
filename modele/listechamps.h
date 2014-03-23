@@ -8,7 +8,7 @@ class ListeChamps : public Champ
 {
     Q_OBJECT
 public:
-    explicit ListeChamps(QObject *parent = 0);
+    explicit ListeChamps(QString nomChamp,QObject *parent = 0);
     /**
      * @brief toString convertit l'objet en format lisible
      * @return une QString contenant un format lisible du champ
@@ -27,7 +27,8 @@ public:
 
 
 signals:
-
+    void beginInsert(int position);
+    void endInsert();
 public slots:
 
 private:

@@ -22,7 +22,10 @@ SOURCES += main.cpp\
     modele/listechamps.cpp \
     modele/mymodellistechamps.cpp \
     modele/nom.cpp \
-    modele/image.cpp
+    modele/image.cpp \
+    modele/texte.cpp \
+    vue/ajouterchamp.cpp \
+    vue/imageedit.cpp
 
 HEADERS  += vue/mainwindow.h \
     modele/contact.h \
@@ -34,9 +37,14 @@ HEADERS  += vue/mainwindow.h \
     modele/listechamps.h \
     modele/mymodellistechamps.h \
     modele/nom.h \
-    modele/image.h
+    modele/image.h \
+    modele/texte.h \
+    vue/ajouterchamp.h \
+    vue/imageedit.h
 
 FORMS    += vue/mainwindow.ui \
-    vue/contactview.ui
+    vue/contactview.ui \
+    vue/ajouterchamp.ui \
+    vue/imageedit.ui
 
 QMAKE_CXXFLAGS += -std=c++11

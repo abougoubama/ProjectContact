@@ -9,7 +9,7 @@ class Champ : public QObject
 {
     Q_OBJECT
 public:
-    explicit Champ(QObject *parent = 0);
+    explicit Champ(QString nomChamp, QObject *parent = 0);
     void setNomChamp(QString nom);
     QString nomChamp();
     /**
@@ -23,7 +23,7 @@ public:
      */
     virtual bool fromString(const QString)=0;
 
-    virtual QVariant toQVariant() const ;
+    virtual QVariant toQVariant() ;
 
     virtual bool fromQVariant(const QVariant v);
     virtual QVariant image() const;

@@ -10,7 +10,7 @@ class Nom : public Champ
 {
     Q_OBJECT
 public:
-    explicit Nom(QObject *parent = 0);
+    explicit Nom(QString nomChamp,QObject *parent = 0);
     virtual QString toString() const;
     virtual bool fromString(const QString s);
 signals:
