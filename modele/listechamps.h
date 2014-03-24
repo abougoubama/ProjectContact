@@ -2,6 +2,8 @@
 #define LISTECHAMPS_H
 
 #include "champ.h"
+#include <QVariant>
+#include <QString>
 
 
 class ListeChamps : public Champ
@@ -19,6 +21,8 @@ public:
      * @return true si la conversion a réussi , false sinon
      */
     virtual bool fromString(const QString);
+    virtual QVariant toQVariant();
+    virtual bool fromQVariant(const QVariant v);
      int nbChamps();
      Champ *getChamp(int i);
 
@@ -31,10 +35,10 @@ signals:
     void endInsert();
 public slots:
 
-private:
+protected:
     QList<Champ*> mListeChamps;
 
 };
-
+Q_DECLARE_METATYPE (ListeChamps*)
 
 #endif // LISTECHAMPS_H

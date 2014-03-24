@@ -33,12 +33,7 @@ Contact::~Contact()
 
 Champ* Contact::creerNom(QString nomChamp)
 {
-    ListeChamps* nom=new ListeChamps(nomChamp);
-    nom->ajouterChamp(new Texte("Nom","N"));
-    nom->ajouterChamp(new Texte("Prénom","P"));
-    nom->ajouterChamp(new Texte("Surnom","S"));
-    nom->ajouterChamp(new Texte("Prefixe","P"));
-    return nom;
+    return new Nom(nomChamp);
 }
 
 Champ* Contact::creerImage(QString nomChamp)

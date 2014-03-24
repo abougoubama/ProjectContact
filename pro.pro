@@ -25,7 +25,8 @@ SOURCES += main.cpp\
     modele/image.cpp \
     modele/texte.cpp \
     vue/ajouterchamp.cpp \
-    vue/imageedit.cpp
+    vue/imageedit.cpp \
+    vue/listechampsedit.cpp
 
 HEADERS  += vue/mainwindow.h \
     modele/contact.h \
@@ -40,11 +41,13 @@ HEADERS  += vue/mainwindow.h \
     modele/image.h \
     modele/texte.h \
     vue/ajouterchamp.h \
-    vue/imageedit.h
+    vue/imageedit.h \
+    vue/listechampsedit.h
 
 FORMS    += vue/mainwindow.ui \
     vue/contactview.ui \
     vue/ajouterchamp.ui \
-    vue/imageedit.ui
+    vue/imageedit.ui \
+    vue/listechampsedit.ui
 
 QMAKE_CXXFLAGS += -std=c++11

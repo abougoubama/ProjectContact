@@ -25,6 +25,20 @@ ListeChamps::ListeChamps(QString nomChamp, QObject *parent) :
     return false;
 }
 
+ QVariant ListeChamps::toQVariant()
+ {
+    return QVariant::fromValue(this);
+ }
+
+ bool ListeChamps::fromQVariant(const QVariant v)
+ {
+    ListeChamps * listeChamps=v.value<ListeChamps*>();
+    mListeChamps=listeChamps->mListeChamps;
+
+    return true;
+ }
+
+
 int ListeChamps::nbChamps()
 {
     return mListeChamps.size();

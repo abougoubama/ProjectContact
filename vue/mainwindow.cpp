@@ -18,42 +18,42 @@
 #include "modele/champ.h"
 #include "ajouterchamp.h"
 #include "imageedit.h"
+#include "listechampsedit.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
       QItemEditorFactory *factory= new QItemEditorFactory;
-      factory->registerEditor((QVariant::Type)qMetaTypeId<Image*>(), new         QStandardItemEditorCreator<ImageEdit>());
-      factory->registerEditor((QVariant::Type)qMetaTypeId<QString>(), new         QStandardItemEditorCreator<QLineEdit>());
+      factory->registerEditor((QVariant::Type)qMetaTypeId<Image*>(), new  QStandardItemEditorCreator<ImageEdit>());
+      factory->registerEditor((QVariant::Type)qMetaTypeId<QString>(), new QStandardItemEditorCreator<QLineEdit>());
+      factory->registerEditor((QVariant::Type)qMetaTypeId<ListeChamps*>(), new QStandardItemEditorCreator<ListeChampsEdit>());
+
       QItemEditorFactory::setDefaultFactory(factory);
 
 
        ui->setupUi(this);
        Contact * contact1 =new Contact;
-       Nom * nom1=new Nom("Nom");
-       nom1->fromString("doudou");
+       Nom * nom1=new Nom("Nom","bbb","aaa","nnnn","gggg");
 
        contact1->setNom(nom1);
        Image * image1=new Image("Image");
        image1->setUrl(QUrl("file:///home/bama/Documents/c++/doudouchat.jpg"));
 
        contact1->listeChamps().ajouterChamp(image1);
-       contact1->listeChamps().ajouterChamp(Contact::creerNom("Nom"));
+
+       //Contact * contact2=new Contact;
+       //Nom * nom2=new Nom("Nom");
 
 
-       Contact * contact2=new Contact;
-       Nom * nom2=new Nom("Nom");
-       nom2->fromString("tichat");
+       //contact2->setNom(nom2);
+       //Image * image2=new Image("Image");
+       //image2->setUrl(QUrl("file:///home/bama/Documents/c++/bama.jpg"));
 
-       contact2->setNom(nom2);
-       Image * image2=new Image("Image");
-       image2->setUrl(QUrl("file:///home/bama/Documents/c++/bama.jpg"));
-
-       contact2->listeChamps().ajouterChamp(image2);
+       //contact2->listeChamps().ajouterChamp(image2);
 
        mContacts.ajouterContact(contact1);
-       mContacts.ajouterContact(contact2);
+       //mContacts.ajouterContact(contact2);
        MyModelContacts * model= new MyModelContacts(mContacts);
 
        ui->horizontalLayout->setStretch(0,0);
