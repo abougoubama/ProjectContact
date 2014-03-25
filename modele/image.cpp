@@ -6,6 +6,12 @@ Image::Image(QString nomChamp, QObject *parent) :
 {
 }
 
+
+Image::Image(QDomElement &element, QObject *parent) : Champ(element.attribute("nomChamp"),parent)
+{
+    setUrl(QUrl(element.text()));
+}
+
 QString Image::toString() const
 {
    return "";
@@ -19,6 +25,14 @@ bool Image::fromString(const QString)
 QVariant Image::toQVariant()
 {
    return QVariant::fromValue(this);
+}
+
+QDomElement Image::toXml(QDomDocument &doc) const
+{
+    QDomElement tag=doc.createElement("Image");
+    tag.setAttribute("nomChamp",mNomChamp);
+    tag.appendChild(doc.createTextNode(mUrl.toString()));
+    return tag;
 }
 
 bool Image::fromQVariant(const QVariant v)

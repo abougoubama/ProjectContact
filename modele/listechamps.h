@@ -5,12 +5,14 @@
 #include <QVariant>
 #include <QString>
 
+class Nom;
 
 class ListeChamps : public Champ
 {
     Q_OBJECT
 public:
     explicit ListeChamps(QString nomChamp,QObject *parent = 0);
+    explicit ListeChamps(QDomElement element,QObject *parent = 0);
     /**
      * @brief toString convertit l'objet en format lisible
      * @return une QString contenant un format lisible du champ
@@ -23,10 +25,25 @@ public:
     virtual bool fromString(const QString);
     virtual QVariant toQVariant();
     virtual bool fromQVariant(const QVariant v);
+    /**
+      * @brief nbChamps
+      * @return
+      */
      int nbChamps();
+     /**
+      * @brief getChamp
+      * @param i
+      * @return
+      */
      Champ *getChamp(int i);
-
+     /**
+      * @brief ajouterChamp
+      * @param champ
+      */
      void ajouterChamp(Champ * champ);
+     QDomElement toXml(QDomDocument &doc) const;
+
+     Nom* trouverNom() const;
 
 
 

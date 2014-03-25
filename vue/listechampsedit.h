@@ -17,8 +17,20 @@ class ListeChampsEdit : public QWidget
 public:
     explicit ListeChampsEdit(QWidget *parent = 0);
     ~ListeChampsEdit();
+    /**
+     * @brief listeChamps
+     * @return
+     */
     ListeChamps * listeChamps() const;
+    /**
+     * @brief setListeChamps
+     * @param listeChamps
+     */
     void setListeChamps(ListeChamps *listeChamps) ;
+    /**
+     * @brief sizeHint
+     * @return
+     */
     QSize sizeHint() const;
 
 private:

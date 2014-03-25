@@ -17,8 +17,20 @@ class ImageEdit : public QWidget
 public:
     explicit ImageEdit(QWidget *parent = 0);
     ~ImageEdit();
+    /**
+     * @brief image
+     * @return
+     */
     Image * image() const;
+    /**
+     * @brief setImage
+     * @param image
+     */
     void setImage(Image *image) ;
+    /**
+     * @brief sizeHint
+     * @return
+     */
     QSize sizeHint() const;
 
 

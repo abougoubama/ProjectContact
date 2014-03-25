@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QString>
 #include <QVariant>
+#include <QDomElement>
 
 class Champ : public QObject
 {
@@ -27,13 +28,14 @@ public:
 
     virtual bool fromQVariant(const QVariant v);
     virtual QVariant image() const;
+    virtual QDomElement toXml(QDomDocument &doc) const=0;
 
 
 signals:
 
 public slots:
 
-private:
+protected:
     QString mNomChamp;
 
 

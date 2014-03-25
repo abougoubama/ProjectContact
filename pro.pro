@@ -6,7 +6,7 @@
 
 QT       += core gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets xml
 
 TARGET = pro
 TEMPLATE = app
@@ -26,7 +26,10 @@ SOURCES += main.cpp\
     modele/texte.cpp \
     vue/ajouterchamp.cpp \
     vue/imageedit.cpp \
-    vue/listechampsedit.cpp
+    vue/listechampsedit.cpp \
+    modele/adresse.cpp \
+    modele/email.cpp \
+    vue/nouveaucontact.cpp
 
 HEADERS  += vue/mainwindow.h \
     modele/contact.h \
@@ -42,12 +45,16 @@ HEADERS  += vue/mainwindow.h \
     modele/texte.h \
     vue/ajouterchamp.h \
     vue/imageedit.h \
-    vue/listechampsedit.h
+    vue/listechampsedit.h \
+    modele/adresse.h \
+    modele/email.h \
+    vue/nouveaucontact.h
 
 FORMS    += vue/mainwindow.ui \
     vue/contactview.ui \
     vue/ajouterchamp.ui \
     vue/imageedit.ui \
-    vue/listechampsedit.ui
+    vue/listechampsedit.ui \
+    vue/nouveaucontact.ui
 
 QMAKE_CXXFLAGS += -std=c++11

@@ -37,6 +37,10 @@
      <string>Fichier</string>
     </property>
     <addaction name="actionAjouter_champ"/>
+    <addaction name="actionCr_er_un_nouveau_contact"/>
+    <addaction name="actionSupprimer_un_contact"/>
+    <addaction name="actionSauvegarder"/>
+    <addaction name="actionCharger"/>
    </widget>
    <addaction name="menuFichier"/>
   </widget>
@@ -52,6 +56,26 @@
   <action name="actionAjouter_champ">
    <property name="text">
     <string>Ajouter champ</string>
+   </property>
+  </action>
+  <action name="actionCr_er_un_nouveau_contact">
+   <property name="text">
+    <string>Créer un nouveau contact</string>
+   </property>
+  </action>
+  <action name="actionSupprimer_un_contact">
+   <property name="text">
+    <string>Supprimer un contact</string>
+   </property>
+  </action>
+  <action name="actionSauvegarder">
+   <property name="text">
+    <string>Sauvegarder</string>
+   </property>
+  </action>
+  <action name="actionCharger">
+   <property name="text">
+    <string>Charger</string>
    </property>
   </action>
  </widget>

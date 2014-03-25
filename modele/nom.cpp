@@ -16,6 +16,12 @@ Nom::Nom(QString nomChamp, QString nom, QString prenom, QString surnom, QString 
   ajouterChamp(new Texte("Prefixe",prefixe));
 
 }
+
+Nom::Nom(QDomElement &element,QObject *parent) : ListeChamps(element,parent)
+{
+
+}
+
 QString Nom::toString() const
 {
     QString nom, prenom,surnom,  prefixe;
@@ -27,10 +33,18 @@ QString Nom::toString() const
       if(champ->nomChamp()=="Surnom") surnom=champ->toString();
       if(champ->nomChamp()=="Prefixe") prefixe=champ->toString();
    }
-   QString s = prefixe+" " + prenom + " \"" + surnom + "\" " +nom;
+   QString s = prefixe+" "+ prenom+(surnom=="" ? " " : " \"" + surnom+ "\" ") + nom ;
    return s.replace("  "," ").trimmed();
 }
-bool Nom::fromString(const QString s)
+bool Nom::fromString(const QString )
 {
    return false;
+}
+
+
+QDomElement Nom::toXml(QDomDocument &doc) const
+{
+    QDomElement tag=ListeChamps::toXml(doc);
+    tag.setTagName("Nom");
+    return tag;
 }

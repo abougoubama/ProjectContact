@@ -10,7 +10,18 @@ class MyModelContacts : public QAbstractListModel
     Q_OBJECT
 public:
     explicit MyModelContacts(Contacts & Contacts,QObject *parent = 0);
+    /**
+     * @brief rowCount
+     * @param parent
+     * @return
+     */
     int rowCount(const QModelIndex &parent = QModelIndex()) const ;
+    /**
+     * @brief data
+     * @param index
+     * @param role
+     * @return
+     */
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
 
 

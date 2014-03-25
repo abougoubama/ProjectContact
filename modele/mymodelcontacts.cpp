@@ -5,7 +5,18 @@
 MyModelContacts::MyModelContacts(Contacts & contacts,QObject *parent) :
     QAbstractListModel(parent),mContacts(contacts)
 {
-
+    connect(&mContacts,&Contacts::beginInsert,[this](int position){
+        beginInsertRows(QModelIndex(),position,position);
+    });
+    connect(&mContacts,&Contacts::endInsert,[this](){
+        endInsertRows();
+    });
+    connect(&mContacts,&Contacts::beginRemove,[this](int position){
+        beginRemoveRows(QModelIndex(),position,position);
+    });
+    connect(&mContacts,&Contacts::endRemove,[this](){
+        endRemoveRows();
+    });
 }
 
 int MyModelContacts::rowCount(const QModelIndex & /*parent*/) const
