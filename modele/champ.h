@@ -31,6 +31,7 @@ public:
     virtual QDomElement toXml(QDomDocument &doc) const=0;
 
 
+
 signals:
 
 public slots:

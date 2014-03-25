@@ -40,5 +40,5 @@ void ListeChampsEdit::setListeChamps(ListeChamps *listeChamps)
 
 QSize ListeChampsEdit::sizeHint() const
 {
-    return QSize(ui->tableView->sizeHint().width()*2,ui->tableView->model()->rowCount()*30);
+    return QSize(ui->tableView->sizeHint().width()*2,ui->tableView->model()->rowCount()*25+25);
 }

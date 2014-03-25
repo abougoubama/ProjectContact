@@ -4,9 +4,8 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets xml
+QT       += core gui xml
+QT += widgets
 
 TARGET = pro
 TEMPLATE = app
@@ -29,7 +28,10 @@ SOURCES += main.cpp\
     vue/listechampsedit.cpp \
     modele/adresse.cpp \
     modele/email.cpp \
-    vue/nouveaucontact.cpp
+    vue/nouveaucontact.cpp \
+    modele/tel.cpp \
+    modele/enum.cpp \
+    vue/enumedit.cpp
 
 HEADERS  += vue/mainwindow.h \
     modele/contact.h \
@@ -48,7 +50,10 @@ HEADERS  += vue/mainwindow.h \
     vue/listechampsedit.h \
     modele/adresse.h \
     modele/email.h \
-    vue/nouveaucontact.h
+    vue/nouveaucontact.h \
+    modele/tel.h \
+    modele/enum.h \
+    vue/enumedit.h
 
 FORMS    += vue/mainwindow.ui \
     vue/contactview.ui \

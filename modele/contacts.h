@@ -2,7 +2,7 @@
 #define CONTACTS_H
 
 #include <QObject>
-#include "contact.h"
+#include "modele/contact.h"
 #include "vue/nouveaucontact.h"
 
 

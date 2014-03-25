@@ -1,3 +1,4 @@
+#include <QDomElement>
 #include "contact.h"
 #include "listechamps.h"
 #include "modele/nom.h"
@@ -6,6 +7,7 @@
 #include "modele/email.h"
 #include "modele/listechamps.h"
 #include "modele/image.h"
+
 
 
 Contact::Contact(QObject *parent) :QObject(parent),mListeChamps("")

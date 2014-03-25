@@ -5,6 +5,8 @@
 #include "image.h"
 #include "nom.h"
 #include "texte.h"
+#include "tel.h"
+#include "enum.h"
 
 ListeChamps::ListeChamps(QString nomChamp, QObject *parent) :
     Champ(nomChamp,parent)
@@ -24,6 +26,8 @@ ListeChamps::ListeChamps(QDomElement element, QObject *parent) : Champ(element.a
         else if(elem.tagName()=="ListeChamps") ajouterChamp(new ListeChamps(elem,this));
         else if(elem.tagName()=="Nom") ajouterChamp(new Nom(elem,this));
         else if(elem.tagName()=="Texte") ajouterChamp(new Texte(elem,this));
+        else if(elem.tagName()=="Tel") ajouterChamp(new Tel(elem,this));
+        else if (elem.tagName()=="Enum") ajouterChamp(new Enum(elem,this));
         elem=elem.nextSiblingElement();
     }
 }

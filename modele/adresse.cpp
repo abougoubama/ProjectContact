@@ -8,21 +8,21 @@ Adresse::Adresse(QString nomChamp, QObject *parent) :
 {
 }
 
-Adresse::Adresse(QString nomChamp,QString rue, QString zipcode,QString localite, QString region ,QString pays,QObject *parent):
+Adresse::Adresse(QString nomChamp, QString rue, QString zipcode, QString localite, QString region , QString pays,QObject *parent):
     ListeChamps(nomChamp,parent)
 {
   ajouterChamp(new Texte("Rue",rue));
   ajouterChamp(new Texte("ZipCode",zipcode));
   ajouterChamp(new Texte("Localité",localite));
   ajouterChamp(new Texte("Région",region));
-  ajouterChamp(new Texte("Pays",pays));
-
+  ajouterChamp(new Texte("Pays",pays));  
 }
 
 Adresse::Adresse(QDomElement &element,QObject *parent) : ListeChamps(element,parent)
 {
 
 }
+
 
 QString Adresse::toString() const
 {
@@ -43,6 +43,7 @@ bool Adresse::fromString(const QString)
 {
    return false;
 }
+
 
 
 QDomElement Adresse::toXml(QDomDocument &doc) const

@@ -9,6 +9,11 @@ class Adresse : public ListeChamps
 {
     Q_OBJECT
 public:
+    typedef enum {
+         Work,
+        Home,
+        Other
+    } TypeAdresse;
     explicit Adresse(QString nomChamp, QObject *parent = 0);
     explicit Adresse(QString nomChamp, QString rue, QString zipcode, QString localite, QString region, QString pays, QObject *parent = 0);
     explicit Adresse(QDomElement &element,QObject *parent = 0);
