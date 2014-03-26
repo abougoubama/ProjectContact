@@ -100,7 +100,7 @@
    <Texte nomChamp="Poid">Moyen. De 3 à 5,5 kilos.</Texte>
    <Texte nomChamp="Poil">Court. Plus long sur l'épine dorsale</Texte>
    <Texte nomChamp="Couleur">Lièvre, sorrel, bleu, fawn (faon) et roux (red)</Texte>
-   <Image nomChamp="Domicile">file://image_chat/maison3.jpg</Image>
+   <Image nomChamp="Domicile">file://image_chat/maison3.png</Image>
   </ListeChamps>
  </Contact>
  <Contact>
