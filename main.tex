@@ -1,0 +1,136 @@
+\documentclass{report}
+\usepackage[utf8x]{inputenc}
+\usepackage{verbatim}
+\usepackage[francais]{babel}
+\usepackage{url}
+
+\title{Projet de Langage Objet Avancé : Gestionnaire de Contacts}
+\author{Bama Abougou et Davina Rungen}
+\date{26 Mars 2014}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Introduction}
+L’objectif de ce projet est de réaliser un gestionnaire de contact en utilisant Qt
+et la stl.
+\section{Spécification}
+Voici les différentes spécifications qui ont été données :
+\begin{itemize}
+\item Concevoir des classes permettant d’implémenter une liste de contacts et les
+champs qui permettront de les caractériser
+\item Concevoir une interface graphique en utilisant Qt
+\item Concevoir une interface graphique en utilisant Qt
+\item Concevoir la documentation du projet en utilisant Doxygen.
+\end{itemize}
+Le projet se divise en trois parties :
+\begin{itemize}
+\item La conception du modèle : trouver une hiérarchie pratique et efficace
+\item Implémentation des fonctionnalités : rendre le projet fonctionnel
+\item La conception de l’interface graphique : donner à l’utilisateur accès à toutes
+les fonctionnalités
+\end{itemize}
+
+\section{Fichier et dossier du projet}
+\begin{itemize}
+\item Pro.pro est le fichier de description du projet (our qtcreator)
+\item main.cpp contient la fonction main du projet
+\item modele/ et vue/ sont les dossiers où sont mises les sources
+\item rapport/ est le dossier où se trouve ce rapport
+
+\section{Projet réalisé avec Qt5.2}
+Ce projet a été réalisé avec Qt5.2 , une version téléchargeable est disponible sous le lien suivant : 
+\url{http://download.qt-project.org/official_releases/qt/5.2/5.2.1/qt-opensource-linux-x64-5.2.1.run}
+
+\section{Fichier contacts d'exemple}
+J'ai réalisé un fichier de contacts pour l'exemple, afin que les images soient bien chargé il faut mettre le fichier "british.xml" ainsi que le dossier image\_chat/ dans le même dossier que l'exécutable (par exemple si les shadow build sont activés dans le dossier build-pro... au dessus du dossier où se trouve le code source)
+
+
+
+\end{itemize}
+
+\chapter{Hiérarchie des classes}
+\section{Modèle}
+Le modèle consiste en une classe Contacts tout en haut de la hiérarchie, qui
+implémente une liste de Contact. 
+
+La classe Contact contient une liste de Champ et un nom. La classe Champ possède un nom , Les classes ListeChamps, Texte et Enum héritent de la classe champ.ListeChamps à 4 fille : Adresse, Email, Nom et Tel 
+
+Les classes MyModelContacts, MyModelListeChamps
+sont des modèles Qt qui permettent à la vue de gérer correctement l'affichage (qui
+permet de modifier dynamiquement l'affichage).
+\subsection{Choix de Liste}
+l'intérêt de la classe ListeChamps est  qu'elle permet à l'utilisateur de choisir d'ajouter autant de champs qu'il veut. Elle permet aussi de faire une implémentation unique entre les champs composés (adresse, email, tel) et la liste des champs d'un contact.
+c'est beaucoup plus général que de fixer les champs directement dans le code.Par exemples l'utilisateur peut avoir plusieurs champs adresse: 
+\begin{itemize}
+\item Adresse de la maison
+\item Adresse de la deuxième maison
+\item Adresse de l'hotel préféré
+\item ...
+\end{itemize}
+Par exemple avec  le téléphone aussi : 
+\begin{itemize}
+\item Numéro de tel privé
+\item Numéro de tel professionnel
+\item ...
+\end{itemize}
+Grâce à la classe ListeChamps on ne contraint pas du tout la façon dont est édité chaque champ et grâce aux delegate d'édition codés (listeChampsEdit imageEdit, ...) cela permet de de concentrer sur le code des modèles et des vues des champs plutôt que leur organisation dans un contact qui est faite automatiquement et mieux par Qt.
+
+
+
+\section{Vue}
+La vue est composée d’une MainWindow et de cinq widgets ContactView,NouveauContact, ListeChampsEdit, ImageEdit et EnumEdit qui servent à l'affichage et l’édition des champs et des contact dans la fenêtre.
+On y trouve également les boîtes de dialogue AjouterChamp qui permettent à l’utilisateur d’entrée des informations lorsqu’il veut  ajouter un champ.
+\chapter{Fonctionnalités}
+Voici la liste des fonctions implémentées :
+\begin{itemize}
+\item Documentation du code  et utilisation de doxygen pour
+générer la doc
+\item Conception des classes permettant de représenter les contacts et les champs
+les décrivant.
+\item L'affichage de la liste des contacts
+\item L'ajout/suppression de contacts dans la liste
+\item L'affichage des détails d’un contact lors d’un clic sur celui-ci dans la liste
+\item La modifications des champs d’un contact
+\item L'implémentation  des champ
+\item L'ajout/suppression de champs pour un contact
+\item La génération de champs par défaut lors de la création d’un contact
+\item La sauvegarde/chargement  de la liste des contact en utilisant un format XML
+\item
+\end{itemize}
+\section{Enregistrer/Sauvegarder}
+\subsection{XML}
+Quant au format XML, il exporte les champs et les contacts en utilisant
+toString(), du coup la méthode toXML() n’a besoin d’être implémentée que dans
+Contact et Champ.
+Syntaxiquement, le format XML se résume à une structure semblable à celle
+du modèle : une suite de <Contact> ... </Contact> avec des balise dont le nom est type du champ et qui possède un attribut nomChamp qui contient le nom de ce champ, et dont le contenu est la valeur du champ.
+
+\chapter{Interface Graphique}
+L’interface graphique contient une liste de contact à gauche et l'affichage ou
+bien l’édition des contacts à droite. On peut aussi sélectionner plusieurs boutons
+dans le menu afin d'afficher l'ouverture et l'enregistrement de fichier.
+
+La vue des contacts est composé d’une liste de champ accompagné de leur
+valeur et pour certains champs
+
+En mode édition chaque champ est modifiable par un widget particulier : par
+exemple l'édition des adresses peut se faire ou bien via une ligne d’édition de texte ou bien via un
+tableau afin d’éditer chaque sous-champ séparé.  Les autres type de champs sont
+eux aussi être édités par des widgets dédiés.
+
+L'interface graphique se compose d'une barre de menue et d'un layout central. Toutes les fonctionnalités sont accessible via la barre de menu. Le layout central est divisé en trois : la liste de contacts, l'affichage du contact et l'édition du contact.Ces deux derniers ne sont jamais visible simultanément.
+Option des menus : Ajouter champ, créer un nouvyoupi !!!
+eau contact, supprimer un contact, sauvegarder , charger
+\chapter{Conclusion}
+\section{Résultat}
+Une partie des fonctionnalités demandées sont réalisés.
+Le modèle implémenté permet facilement d’intégrer d’autres types de champ
+en créant d’autres classes héritant de Champ.
+\subsection{Avancement personnel}
+Ce projet a permis d’apprendre mieux la partie modèle/vue de Qt.
+Il nous a permis de mieux connaître la librairie Qt et qtcreator.
+\end{document}
