@@ -1,0 +1,330 @@
+<!DOCTYPE contacts>
+<Contacts>
+ <Contact>
+  <ListeChamps nomChamp="">
+   <Nom nomChamp="Nom">
+    <Texte nomChamp="Nom">british short hair</Texte>
+    <Texte nomChamp="Prénom">chat1</Texte>
+    <Texte nomChamp="Surnom">british</Texte>
+    <Texte nomChamp="Prefixe">Mlle</Texte>
+   </Nom>
+   <Image nomChamp="Image">file://image_chat/british_shorthair.jpg</Image>
+   <Adresse nomChamp="Adresse">
+    <Texte nomChamp="Rue">1 place de la resistance</Texte>
+    <Texte nomChamp="ZipCode">91025</Texte>
+    <Texte nomChamp="Localité">Evry</Texte>
+    <Texte nomChamp="Région">Versaille</Texte>
+    <Texte nomChamp="Pays">FRANCE</Texte>
+   </Adresse>
+   <Email nomChamp="Email">
+    <Texte nomChamp="Nom">chat1</Texte>
+    <Texte nomChamp="Domaine">gmail</Texte>
+    <Texte nomChamp="Extension">com</Texte>
+   </Email>
+   <Tel nomChamp="Tel">
+    <Texte nomChamp="Numéro">061566666</Texte>
+   </Tel>
+   <Enum enumType="1" nomChamp="griaou">1</Enum>
+   <Texte nomChamp=""></Texte>
+   <Texte nomChamp="Espèce">Chat (Felis silvestris catus)</Texte>
+   <Texte nomChamp="Région">Angleterre</Texte>
+   <Texte nomChamp="Silhouette">Type semi-cobby</Texte>
+   <Texte nomChamp="Taille">Moyenne à grande</Texte>
+   <Texte nomChamp="Poid">3 à 8 kg</Texte>
+   <Texte nomChamp="Poil">Court et dense</Texte>
+   <Texte nomChamp="Couleur">gris</Texte>
+   <Image nomChamp="Domicile">file://image_chat/maison1.jpg</Image>
+  </ListeChamps>
+ </Contact>
+ <Contact>
+  <ListeChamps nomChamp="">
+   <Nom nomChamp="Nom">
+    <Texte nomChamp="Nom">Bleu russe</Texte>
+    <Texte nomChamp="Prénom">chat2</Texte>
+    <Texte nomChamp="Surnom">russe</Texte>
+    <Texte nomChamp="Prefixe">M</Texte>
+   </Nom>
+   <Image nomChamp="Image">file://image_chat/bleu_russe.jpg</Image>
+   <Adresse nomChamp="Adresse">
+    <Texte nomChamp="Rue">1 place de la resistance</Texte>
+    <Texte nomChamp="ZipCode">91025</Texte>
+    <Texte nomChamp="Localité">Evry</Texte>
+    <Texte nomChamp="Région">Versaille</Texte>
+    <Texte nomChamp="Pays">FRANCE</Texte>
+   </Adresse>
+   <Email nomChamp="Email">
+    <Texte nomChamp="Nom">chat2</Texte>
+    <Texte nomChamp="Domaine">gmail</Texte>
+    <Texte nomChamp="Extension">com</Texte>
+   </Email>
+   <Tel nomChamp="Tel">
+    <Texte nomChamp="Numéro">0615333333</Texte>
+   </Tel>
+   <Enum enumType="5" nomChamp="griaou">1</Enum>
+   <Texte nomChamp="Espèce">Chat (Felis silvestris catus)</Texte>
+   <Texte nomChamp="Région"> Russie ou du pourtour méditerranéen.</Texte>
+   <Texte nomChamp="Silhouette">Allongée, de type médioligne foreign</Texte>
+   <Texte nomChamp="Taille">Moyenne à grande</Texte>
+   <Texte nomChamp="Poid">3,5kg</Texte>
+   <Texte nomChamp="Poil">Court et épais</Texte>
+   <Texte nomChamp="Couleur">Bleue, noire ou blanche</Texte>
+   <Image nomChamp="Domicile">file://image_chat/maison2.jpg</Image>
+  </ListeChamps>
+ </Contact>
+ <Contact>
+  <ListeChamps nomChamp="">
+   <Image nomChamp="Image">file://image_chat/abyssin.jpg</Image>
+   <Nom nomChamp="Nom">
+    <Texte nomChamp="Nom">Abyssin</Texte>
+    <Texte nomChamp="Prénom">chat3</Texte>
+    <Texte nomChamp="Surnom">abyssin</Texte>
+    <Texte nomChamp="Prefixe">M</Texte>
+   </Nom>
+   <Adresse nomChamp="Adresse">
+    <Texte nomChamp="Rue">1 Place de la Résistance</Texte>
+    <Texte nomChamp="ZipCode">91025</Texte>
+    <Texte nomChamp="Localité">Evry</Texte>
+    <Texte nomChamp="Région">Versaille</Texte>
+    <Texte nomChamp="Pays">France</Texte>
+   </Adresse>
+   <Email nomChamp="Email">
+    <Texte nomChamp="Nom">chat3</Texte>
+    <Texte nomChamp="Domaine">gmail</Texte>
+    <Texte nomChamp="Extension">com</Texte>
+   </Email>
+   <Texte nomChamp="Sexe">male</Texte>
+   <Texte nomChamp="Espèce">Chat (Felis silvestris catus)</Texte>
+   <Texte nomChamp="Région">sud-est asiatique</Texte>
+   <Texte nomChamp="Silhouette">Médioligne Foreign</Texte>
+   <Texte nomChamp="Taille">Moyenne</Texte>
+   <Texte nomChamp="Poid">Moyen. De 3 à 5,5 kilos.</Texte>
+   <Texte nomChamp="Poil">Court. Plus long sur l'épine dorsale</Texte>
+   <Texte nomChamp="Couleur">Lièvre, sorrel, bleu, fawn (faon) et roux (red)</Texte>
+   <Image nomChamp="Domicile">file://image_chat/maison3.jpg</Image>
+  </ListeChamps>
+ </Contact>
+ <Contact>
+  <ListeChamps nomChamp="">
+   <Image nomChamp="Image">file://image_chat/american_shorthair.jpg</Image>
+   <Nom nomChamp="Nom">
+    <Texte nomChamp="Nom">American short hair</Texte>
+    <Texte nomChamp="Prénom">chat4</Texte>
+    <Texte nomChamp="Surnom">American</Texte>
+    <Texte nomChamp="Prefixe">Mlle</Texte>
+   </Nom>
+   <Adresse nomChamp="Adresse">
+    <Texte nomChamp="Rue">1 Place de la Résistance</Texte>
+    <Texte nomChamp="ZipCode">91025</Texte>
+    <Texte nomChamp="Localité">Evry</Texte>
+    <Texte nomChamp="Région">Versaille</Texte>
+    <Texte nomChamp="Pays">France</Texte>
+   </Adresse>
+   <Email nomChamp="Email">
+    <Texte nomChamp="Nom">chat3</Texte>
+    <Texte nomChamp="Domaine">gmail</Texte>
+    <Texte nomChamp="Extension">com</Texte>
+   </Email>
+   <Texte nomChamp="Sexe"></Texte>
+   <Texte nomChamp="Espèce ">Chat (Felis silvestris catus)</Texte>
+   <Texte nomChamp="Région">États-Unis</Texte>
+   <Texte nomChamp="Silhouette">Médioligne semi-cobby</Texte>
+   <Texte nomChamp="Taille">Moyenne</Texte>
+   <Texte nomChamp="Poid">4 à 8 kg</Texte>
+   <Texte nomChamp="Poil">Court, dense et lustré</Texte>
+   <Texte nomChamp="Couleur"> Toutes les couleurs sont autorisées et motif sauf chocolat, cannelle et faon</Texte>
+   <Image nomChamp="Domicile">file://image_chat/maison4.jpg</Image>
+  </ListeChamps>
+ </Contact>
+ <Contact>
+  <ListeChamps nomChamp="">
+   <Image nomChamp="Image">file://image_chat/bengal.jpg</Image>
+   <Nom nomChamp="Nom">
+    <Texte nomChamp="Nom">Bengal</Texte>
+    <Texte nomChamp="Prénom">chat5</Texte>
+    <Texte nomChamp="Surnom">Bengal</Texte>
+    <Texte nomChamp="Prefixe">Mlle</Texte>
+   </Nom>
+   <Adresse nomChamp="Adresse">
+    <Texte nomChamp="Rue">1 Place de la résistance</Texte>
+    <Texte nomChamp="ZipCode">91025</Texte>
+    <Texte nomChamp="Localité">Evry</Texte>
+    <Texte nomChamp="Région">Versaille</Texte>
+    <Texte nomChamp="Pays">France</Texte>
+   </Adresse>
+   <Email nomChamp="Email">
+    <Texte nomChamp="Nom">chat5</Texte>
+    <Texte nomChamp="Domaine">gmail</Texte>
+    <Texte nomChamp="Extension">com</Texte>
+   </Email>
+   <Texte nomChamp="Sexe">femmele</Texte>
+   <Texte nomChamp="Espèce">Felis silvestris catus x Prionailurus bengalensis</Texte>
+   <Texte nomChamp="Silhouette">Longue et substantielle</Texte>
+   <Texte nomChamp="Taille">Moyenne à grande</Texte>
+   <Texte nomChamp="Poid">Court et soyeux</Texte>
+   <Texte nomChamp="Poil">Court et soyeux</Texte>
+   <Texte nomChamp="Couleur">Spotted tabby ou marbled (blotched tabby modifié)</Texte>
+   <Texte nomChamp="Région">États-Unis</Texte>
+   <Image nomChamp="Domicile">file://image_chat/Maison5.jpg</Image>
+  </ListeChamps>
+ </Contact>
+ <Contact>
+  <ListeChamps nomChamp="">
+   <Image nomChamp="Image">file://image_chat/persan.jpg</Image>
+   <Nom nomChamp="Nom">
+    <Texte nomChamp="Nom">Persan</Texte>
+    <Texte nomChamp="Prénom">chat6</Texte>
+    <Texte nomChamp="Surnom">persan</Texte>
+    <Texte nomChamp="Prefixe">M</Texte>
+   </Nom>
+   <Adresse nomChamp="Adresse">
+    <Texte nomChamp="Rue">1 Place de la Résistance</Texte>
+    <Texte nomChamp="ZipCode">91025</Texte>
+    <Texte nomChamp="Localité">Evry</Texte>
+    <Texte nomChamp="Région">Versaille</Texte>
+    <Texte nomChamp="Pays">France</Texte>
+   </Adresse>
+   <Email nomChamp="Email">
+    <Texte nomChamp="Nom">chat6</Texte>
+    <Texte nomChamp="Domaine">gmail</Texte>
+    <Texte nomChamp="Extension">com</Texte>
+   </Email>
+   <Texte nomChamp="Sexe">Mâle</Texte>
+   <Texte nomChamp="Espèce">Chat (Felis silvestris catus)</Texte>
+   <Texte nomChamp="Région">Royaume-Uni</Texte>
+   <Texte nomChamp="Silhouette">Type Bréviligne, cobby</Texte>
+   <Texte nomChamp="Taille">Moyenne à grande</Texte>
+   <Texte nomChamp="Poid">2,3 à 6,8 kg</Texte>
+   <Texte nomChamp="Poil">Long avec sous-poil abondant</Texte>
+   <Texte nomChamp="Couleur">blanc</Texte>
+   <Image nomChamp="Domicile">file://image_chat/maison6.jpg</Image>
+  </ListeChamps>
+ </Contact>
+ <Contact>
+  <ListeChamps nomChamp="">
+   <Image nomChamp="Image">file://image_chat/savannah.jpg</Image>
+   <Nom nomChamp="Nom">
+    <Texte nomChamp="Nom">Savannah</Texte>
+    <Texte nomChamp="Prénom">chat7</Texte>
+    <Texte nomChamp="Surnom">savannah</Texte>
+    <Texte nomChamp="Prefixe">M</Texte>
+   </Nom>
+   <Adresse nomChamp="Adresse">
+    <Texte nomChamp="Rue">1 Place de la Résistance</Texte>
+    <Texte nomChamp="ZipCode">91025</Texte>
+    <Texte nomChamp="Localité">Evry</Texte>
+    <Texte nomChamp="Région">Versalle</Texte>
+    <Texte nomChamp="Pays">France</Texte>
+   </Adresse>
+   <Email nomChamp="Email">
+    <Texte nomChamp="Nom">chat7</Texte>
+    <Texte nomChamp="Domaine">gmail</Texte>
+    <Texte nomChamp="Extension">com</Texte>
+   </Email>
+   <Texte nomChamp="Sexe">Mâle</Texte>
+   <Texte nomChamp="Espèce">Chat (Felis silvestris catus)</Texte>
+   <Texte nomChamp="Région">États-Unis</Texte>
+   <Texte nomChamp="Silhouette">Médioligne semi-foreign</Texte>
+   <Texte nomChamp="Taille">Grande, jusqu'à 40cm au garrot</Texte>
+   <Texte nomChamp="Poid">De sept à quatorze kilos</Texte>
+   <Texte nomChamp="Poil">Court</Texte>
+   <Texte nomChamp="Couleur">Spotted tabby, noir et noir smoke</Texte>
+   <Image nomChamp="Domicile">file://image_chat/maison7.jpg</Image>
+  </ListeChamps>
+ </Contact>
+ <Contact>
+  <ListeChamps nomChamp="">
+   <Image nomChamp="Image">file://image_chat/scottish_fold.jpg</Image>
+   <Nom nomChamp="Nom">
+    <Texte nomChamp="Nom">Scottish fold</Texte>
+    <Texte nomChamp="Prénom">chat8</Texte>
+    <Texte nomChamp="Surnom">scottish</Texte>
+    <Texte nomChamp="Prefixe">Mlle</Texte>
+   </Nom>
+   <Adresse nomChamp="Adresse">
+    <Texte nomChamp="Rue">1 Place de la résistance</Texte>
+    <Texte nomChamp="ZipCode">91025</Texte>
+    <Texte nomChamp="Localité">Evry</Texte>
+    <Texte nomChamp="Région">Versaille</Texte>
+    <Texte nomChamp="Pays">France</Texte>
+   </Adresse>
+   <Email nomChamp="Email">
+    <Texte nomChamp="Nom">chat8</Texte>
+    <Texte nomChamp="Domaine">gmail</Texte>
+    <Texte nomChamp="Extension">com</Texte>
+   </Email>
+   <Texte nomChamp="Sexe">femelle</Texte>
+   <Texte nomChamp="Espèce">Chat (Felis silvestris catus)</Texte>
+   <Texte nomChamp="Région">Écosse</Texte>
+   <Texte nomChamp="Silhouette">Bréviligne</Texte>
+   <Texte nomChamp="Taille">Moyenne</Texte>
+   <Texte nomChamp="Poid">6kg</Texte>
+   <Texte nomChamp="Poil">Court (scottish fold) ou mi-long (highland fold)</Texte>
+   <Texte nomChamp="Couleur">gris clair</Texte>
+   <Image nomChamp="Domicile">file://image_chat/maison8.jpg</Image>
+  </ListeChamps>
+ </Contact>
+ <Contact>
+  <ListeChamps nomChamp="">
+   <Image nomChamp="Image">file://image_chat/siamois.jpg</Image>
+   <Nom nomChamp="Nom">
+    <Texte nomChamp="Nom">Siamois</Texte>
+    <Texte nomChamp="Prénom">chat9</Texte>
+    <Texte nomChamp="Surnom">simois</Texte>
+    <Texte nomChamp="Prefixe">M</Texte>
+   </Nom>
+   <Adresse nomChamp="Adresse">
+    <Texte nomChamp="Rue">1 Place de la résistance</Texte>
+    <Texte nomChamp="ZipCode">91025</Texte>
+    <Texte nomChamp="Localité">Evry</Texte>
+    <Texte nomChamp="Région">Versaille</Texte>
+    <Texte nomChamp="Pays"></Texte>
+   </Adresse>
+   <Email nomChamp="Email">
+    <Texte nomChamp="Nom">chat8</Texte>
+    <Texte nomChamp="Domaine">gmail</Texte>
+    <Texte nomChamp="Extension">com</Texte>
+   </Email>
+   <Texte nomChamp="Sexe">mâle</Texte>
+   <Texte nomChamp="Espèce">Chat (Felis silvestris catus)</Texte>
+   <Texte nomChamp="égion">Thaïlande</Texte>
+   <Texte nomChamp="Silhouette">Longiligne, svelte et musclé</Texte>
+   <Texte nomChamp="Taille">Taille moyenne à grande</Texte>
+   <Texte nomChamp="Poid">2 à 6 kg</Texte>
+   <Texte nomChamp="Poil">Court et collé au corps</Texte>
+   <Texte nomChamp="Couleur">Colourpoint, toutes les couleurs acceptées</Texte>
+   <Image nomChamp="Domicile">file://image_chat/maison9.jpg</Image>
+  </ListeChamps>
+ </Contact>
+ <Contact>
+  <ListeChamps nomChamp="">
+   <Image nomChamp="Image">file://image_chat/sphynx.jpg</Image>
+   <Nom nomChamp="Nom">
+    <Texte nomChamp="Nom">Sphynx</Texte>
+    <Texte nomChamp="Prénom">chat10</Texte>
+    <Texte nomChamp="Surnom">sphynx</Texte>
+    <Texte nomChamp="Prefixe">M</Texte>
+   </Nom>
+   <Adresse nomChamp="Adresse">
+    <Texte nomChamp="Rue">1 Place de la Résistance</Texte>
+    <Texte nomChamp="ZipCode">91025</Texte>
+    <Texte nomChamp="Localité">Evry</Texte>
+    <Texte nomChamp="Région">Versaille</Texte>
+    <Texte nomChamp="Pays">France</Texte>
+   </Adresse>
+   <Email nomChamp="Email">
+    <Texte nomChamp="Nom">chat10</Texte>
+    <Texte nomChamp="Domaine">gmail</Texte>
+    <Texte nomChamp="Extension">com</Texte>
+   </Email>
+   <Texte nomChamp="Sexe">mâle</Texte>
+   <Texte nomChamp="Espèce">Chat (Felis silvestris catus)</Texte>
+   <Texte nomChamp="Région">Canada</Texte>
+   <Texte nomChamp="Silhouette">Type semi-cobby</Texte>
+   <Texte nomChamp="Taille">Grande</Texte>
+   <Texte nomChamp="Poid">4,5kg</Texte>
+   <Texte nomChamp="Poil">Léger duvet</Texte>
+   <Texte nomChamp="Couleur">noir/gris</Texte>
+   <Image nomChamp="Domicile">file://image_chat/maison10.jpg</Image>
+  </ListeChamps>
+ </Contact>
+</Contacts>

@@ -6,37 +6,43 @@
 #include "vue/nouveaucontact.h"
 
 
-
+/**
+ * @brief La classe Contacts représente une liste de contacts
+ */
 class Contacts : public QObject
 {
     Q_OBJECT
 public:
+    /**
+     * @brief Constructeur par défaut
+     */
     explicit Contacts(QObject *parent = 0);
     explicit Contacts(QDomElement &element,QObject *parent = 0);
     /**
-     * @brief ajouterContact
-     * @param contact
+     * @brief ajouterContact ajoute un contact dans la liste
+     * @param contact Un poiteur vers le contact à ajouter
      */
     void ajouterContact(Contact * contact);
     /**
-     * @brief creerNouveauContact
-     * @param nouveauContact
+     * @brief creerNouveauContact  à partir de son type (personne ou Organisme)
+     * @param typeContact est la personne
+     * @return  un contact crée
      */
 static   Contact * creerNouveauContact(QString typeContact );
 /**
-         * @brief supprimerContact
-         * @param contact
+         * @brief supprimerContact supprime un contact
+         * @param row la ligne où se situe le contact dans la liste de Contacts
          */
         void supprimerContact(int row);
     /**
-     * @brief getContact
-     * @param nbr
-     * @return
+     * @brief getContact retourne un contact de la liste mContacts
+     * @param nbr un numéro pour se situer dans la liste de contacts
+     * @return un contact
      */
     Contact* getContact(int nbr);
     /**
-     * @brief nbContact
-     * @return
+     * @brief nbContact le nombre de contacts total dans la liste
+     * @return le nombre de contacts
      */
     int nbContact();
 
@@ -54,7 +60,10 @@ signals:
 public slots:
 
 private:
-    QList<Contact*> mContacts; //liste de contact dans l'annuaire
+    /**
+     * @brief mContacts la liste de Contact dans l'anuaire
+     */
+    QList<Contact*> mContacts;
     
 };
 

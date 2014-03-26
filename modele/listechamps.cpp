@@ -101,3 +101,10 @@ void ListeChamps::ajouterChamp(Champ * champ)
     emit endInsert();
 }
 
+void ListeChamps::supprimerChamp(int row)
+{
+    emit beginRemove(row);
+    mListeChamps.removeAt(row);
+    emit endRemove();
+}
+

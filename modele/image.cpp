@@ -1,4 +1,6 @@
 #include "image.h"
+#include <QDir>
+#include <QFileInfo>
 #include <QDebug>
 
 Image::Image(QString nomChamp, QObject *parent) :
@@ -53,6 +55,7 @@ void Image::setUrl(QUrl url)
   mUrl=url;
   if(url.isLocalFile())
   {
+      if(!QFileInfo::exists(url.toLocalFile())) url=QUrl("file://"+QDir::currentPath()+url.toLocalFile());
       if(mImage.load(url.toLocalFile())) mImage=mImage.scaledToHeight(400);
   }
 }

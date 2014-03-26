@@ -41,7 +41,7 @@ MainWindow::MainWindow(QWidget *parent) :
        ui->setupUi(this);
 
 
-       Contact * contact1 =new Contact;
+      /* Contact * contact1 =new Contact;
        Nom * nom1=new Nom("Nom","abougou","bama","tichat","mlle");
        contact1->setNom(nom1);
        Image * image1=new Image("Image");
@@ -53,7 +53,7 @@ MainWindow::MainWindow(QWidget *parent) :
        contact1->listeChamps().ajouterChamp(email1);
        Tel * tel1=new Tel("Tel","061566666");
        contact1->listeChamps().ajouterChamp(tel1);
-       Enum * test1 = new Enum("griaou",1,0);
+       Enum * test1 = new Enum("réseaux sociaux",1,0);
        contact1->listeChamps().ajouterChamp(test1);
 
 
@@ -70,25 +70,22 @@ MainWindow::MainWindow(QWidget *parent) :
        contact2->listeChamps().ajouterChamp(email2);
        Tel * tel2=new Tel("Tel","0615333333");
        contact2->listeChamps().ajouterChamp(tel2);
-       Enum * test2 = new Enum("griaou",5,1);
-       contact2->listeChamps().ajouterChamp(test2);
+       Enum * test2 = new Enum("sexe",5,1);
+       contact2->listeChamps().ajouterChamp(test2); */
 
-
+/*
         mContacts=new Contacts();
        mContacts->ajouterContact(contact1);
        mContacts->ajouterContact(contact2);
-
+*/
        ui->horizontalLayout->setStretch(0,0);
        ui->horizontalLayout->setStretch(1,1);
-       MyModelContacts * model= new MyModelContacts(*mContacts);
-       ui->listView->setModel(model);
-
-       connect(ui->listView->selectionModel(),&QItemSelectionModel::currentChanged,
-               [this](const QModelIndex & current, const QModelIndex & )
+       if(!charger("british.xml"))
        {
-           ui->contactWidget->setContact(mContacts->getContact(current.row()));
+           mContacts=new Contacts();
+           connecter();
+       }
 
-       });
 
        connect(ui->actionAjouter_champ,&QAction::triggered,
                this,&MainWindow::ajouterChamp);
@@ -102,6 +99,12 @@ MainWindow::MainWindow(QWidget *parent) :
           mContacts->supprimerContact(ui->listView->currentIndex().row());
 
        });
+       connect(ui->actionSupprimer_champ,&QAction::triggered,
+               [this]()
+       {
+          ui->contactWidget->supprimerChamp();
+
+       });
        connect(ui->actionSauvegarder,&QAction::triggered,[this](){
            QString nomFichier=QFileDialog::getSaveFileName(this,"Où voulez vous enregistrer le fichier de contacts ?", "", "Contacts(*.xml)");
            if(nomFichier=="") return;
@@ -113,20 +116,32 @@ MainWindow::MainWindow(QWidget *parent) :
            QString nomFichier=QFileDialog::getOpenFileName(this,"Quel fichier de contacts voulez vous charger ?", "", "Contacts(*.xml)");
            if(nomFichier=="") return;
            if(nomFichier.section(".",-1)!="xml") nomFichier+=".xml";
-           mContacts=Contacts::charger(nomFichier);
-           MyModelContacts * model= new MyModelContacts(*mContacts);
-           ui->listView->setModel(model);
-
-           connect(ui->listView->selectionModel(),&QItemSelectionModel::currentChanged,
-                   [this](const QModelIndex & current, const QModelIndex & )
-           {
-               ui->contactWidget->setContact(mContacts->getContact(current.row()));
-
-           });
+           charger(nomFichier);
        });
 
        showMaximized();
        // en ajoutant au moins un champs dans les ListeChamps
+}
+
+void MainWindow::connecter()
+{
+    MyModelContacts * model= new MyModelContacts(*mContacts);
+    ui->listView->setModel(model);
+
+    connect(ui->listView->selectionModel(),&QItemSelectionModel::currentChanged,
+            [this](const QModelIndex & current, const QModelIndex & )
+    {
+        ui->contactWidget->setContact(mContacts->getContact(current.row()));
+
+    });
+}
+
+bool MainWindow::charger(QString nomFichier)
+{
+    mContacts=Contacts::charger(nomFichier);
+    if(mContacts==nullptr) return false;
+    connecter();
+    return true;
 }
 
 MainWindow::~MainWindow()

@@ -12,6 +12,12 @@ MyModelListeChamps::MyModelListeChamps(ListeChamps & listechamps,QObject *parent
     connect(&mListeChamps,&ListeChamps::endInsert,[this](){
         endInsertRows();
     });
+    connect(&mListeChamps,&ListeChamps::beginRemove,[this](int position){
+        beginRemoveRows(QModelIndex(),position,position);
+    });
+    connect(&mListeChamps,&ListeChamps::endRemove,[this](){
+        endRemoveRows();
+    });
 }
 
 int MyModelListeChamps::rowCount(const QModelIndex & /*parent*/) const

@@ -38,11 +38,6 @@
        <string>Personne</string>
       </property>
      </item>
-     <item>
-      <property name="text">
-       <string>Organisme</string>
-      </property>
-     </item>
     </widget>
    </item>
   </layout>

@@ -41,6 +41,7 @@
     <addaction name="actionSupprimer_un_contact"/>
     <addaction name="actionSauvegarder"/>
     <addaction name="actionCharger"/>
+    <addaction name="actionSupprimer_champ"/>
    </widget>
    <addaction name="menuFichier"/>
   </widget>
@@ -76,6 +77,11 @@
   <action name="actionCharger">
    <property name="text">
     <string>Charger</string>
+   </property>
+  </action>
+  <action name="actionSupprimer_champ">
+   <property name="text">
+    <string>Supprimer champ</string>
    </property>
   </action>
  </widget>

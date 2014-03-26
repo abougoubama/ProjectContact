@@ -11,6 +11,11 @@ class ListeChamps : public Champ
 {
     Q_OBJECT
 public:
+    /**
+     * @brief Constructeur par défaut
+     * @param parent fourni le parent ou QObject
+     * @param nomChamp donne le nom du champ
+     */
     explicit ListeChamps(QString nomChamp,QObject *parent = 0);
     explicit ListeChamps(QDomElement element,QObject *parent = 0);
     /**
@@ -41,6 +46,7 @@ public:
       * @param champ
       */
      void ajouterChamp(Champ * champ);
+     void supprimerChamp(int position);
      QDomElement toXml(QDomDocument &doc) const;
 
      Nom* trouverNom() const;
@@ -50,6 +56,8 @@ public:
 signals:
     void beginInsert(int position);
     void endInsert();
+    void beginRemove(int position);
+    void endRemove();
 public slots:
 
 protected:

@@ -9,6 +9,9 @@ class MyModelContacts : public QAbstractListModel
 {
     Q_OBJECT
 public:
+    /**
+     * @brief Constructeur par défaut
+     */
     explicit MyModelContacts(Contacts & Contacts,QObject *parent = 0);
     /**
      * @brief rowCount

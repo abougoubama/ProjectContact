@@ -7,6 +7,9 @@ class MyModelListeChamps : public QAbstractTableModel
 {
     Q_OBJECT
 public:
+    /**
+     * @brief Constructeur par défaut
+     */
     explicit MyModelListeChamps(ListeChamps &listechamps, QObject *parent = 0);
     int rowCount(const QModelIndex &parent = QModelIndex()) const ;
     int columnCount(const QModelIndex & parent= QModelIndex()) const ;

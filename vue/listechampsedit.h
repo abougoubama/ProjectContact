@@ -8,7 +8,9 @@
 namespace Ui {
 class ListeChampsEdit;
 }
-
+/**
+ * @brief La classe ListeChampsEdit permet d'éditer une liste de champs
+ */
 class ListeChampsEdit : public QWidget
 {
     Q_OBJECT
@@ -18,14 +20,14 @@ public:
     explicit ListeChampsEdit(QWidget *parent = 0);
     ~ListeChampsEdit();
     /**
-     * @brief listeChamps
-     * @return
+     * @brief listeChamps renvoit la Liste associé au Widget
+     * @return la liste associé au Widget
      */
     ListeChamps * listeChamps() const;
     /**
-     * @brief setListeChamps
-     * @param listeChamps
-     */
+     * @brief setListeChamps est un setter pour la ListeChamps associé au Widget
+     * @param listeChamps la nouvelle ListeChamps
+     */   
     void setListeChamps(ListeChamps *listeChamps) ;
     /**
      * @brief sizeHint
@@ -34,7 +36,13 @@ public:
     QSize sizeHint() const;
 
 private:
+    /**
+     * @brief ui Un pointeur vers la user interface
+     */
     Ui::ListeChampsEdit *ui;
+    /**
+     * @brief mListeChamps est la Structure représentée par ce widget
+     */
     ListeChamps * mListeChamps;
 };
 

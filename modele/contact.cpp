@@ -7,7 +7,7 @@
 #include "modele/email.h"
 #include "modele/listechamps.h"
 #include "modele/image.h"
-
+#include "modele/tel.h"
 
 
 Contact::Contact(QObject *parent) :QObject(parent),mListeChamps("")
@@ -72,6 +72,7 @@ Champ* Contact::creerChamp(QString nomChamp, QString typeChamp )
     if(typeChamp=="Texte") return creerTexte(nomChamp);
     if(typeChamp=="Email") return creerEmail(nomChamp);
     if(typeChamp=="Adresse") return creerAdresse(nomChamp);
+    if(typeChamp=="Tel") return new Tel(nomChamp);
     return nullptr;
 }
 

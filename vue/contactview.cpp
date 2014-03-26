@@ -9,7 +9,7 @@ ContactView::ContactView(QWidget *parent) :
     ui(new Ui::ContactView)
 {
     ui->setupUi(this);
-
+    mContact=nullptr;
     //ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
     //ui->tableView->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
 }
@@ -27,6 +27,7 @@ int max(int a, int b)
 //affiche le contact, change le texte du label pour afficher le nom du contact
 void ContactView::setContact(Contact *contact)
 {
+    mContact=contact;
     ui->tableView->setModel(new MyModelListeChamps(contact->listeChamps()));
     ui->tableView->resizeColumnsToContents();
     ui->tableView->resizeRowsToContents();
@@ -38,4 +39,10 @@ void ContactView::setContact(Contact *contact)
         }
         });
 
+}
+
+void ContactView::supprimerChamp()
+{
+    if(mContact==nullptr) return ;
+    mContact->listeChamps().supprimerChamp(ui->tableView->currentIndex().row());
 }
