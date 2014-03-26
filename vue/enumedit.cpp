@@ -1,5 +1,4 @@
 #include "enumedit.h"
-#include "ui_enumedit.h"
 #include "modele/enum.h"
 #include <QComboBox>
 
